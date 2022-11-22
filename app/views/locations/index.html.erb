@@ -5,3 +5,8 @@
     <p> Owner :<%= location.user.email.split('@').first %> </p>
   </div>
 <% end %>
+
+<%= link_to new_location_path() do %>
+  Add Location
+  <i class="fa-solid fa-plus"></i>
+<% end %>
