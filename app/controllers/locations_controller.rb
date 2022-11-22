@@ -14,6 +14,8 @@ class LocationsController < ApplicationController
 
   def create
     @location = Location.new(location_params)
+    @location.user_id = current_user.id
+    @location.category = "'kids party', 'student party', 'wedding', 'bal', 'birthday'"
     if @location.save
       redirect_to location_path(@location)
     else
@@ -40,6 +42,6 @@ class LocationsController < ApplicationController
   private
 
   def location_params
-    params.require(:restaurant).permit(:title, :address, :category)
+    params.require(:location).permit(:title, :address, :category)
   end
 end
