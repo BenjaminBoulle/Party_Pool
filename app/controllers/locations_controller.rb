@@ -1,11 +1,16 @@
 class LocationsController < ApplicationController
   def index
-    @locations = Location.all
+    locations = Location.all
+    @locations = []
+    locations.each do |element|
+      unless element.user == current_user
+        @locations << element
+      end
+    end
   end
 
   def show
     @location = Location.find(params[:id])
-    @owner = @location.user.email.split('@').first
   end
 
   def new
