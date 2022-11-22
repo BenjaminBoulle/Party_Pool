@@ -1,0 +1,26 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  // background-color: crimson;
+  background-image: url("https://st3.depositphotos.com/5403790/35437/i/600/depositphotos_354377432-stock-photo-trendy-line-art-icon-with.jpg")
+}
+
+.banner h1 {
+  margin: 0;
+  color: whitesmoke;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  font-weight: 25px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+.a{
+  color:white;
+}
