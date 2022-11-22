@@ -26,11 +26,24 @@
   border-radius: 5px;
   border-color:  black;
   border-style: outset;
-  width: 500px;
+  width: 700px;
 }
 
 @keyframes AnimateBG {
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
   100%{background-position:0% 50%}
+}
+
+.name{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form-actions{
+  color: mediumorchid;
+  display: flex;
+  justify-content: space-around;
+  font-size: large;
+  text-decoration-line: none;
 }
