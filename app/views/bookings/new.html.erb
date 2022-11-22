@@ -1,1 +1,7 @@
-#new booking
+<%= simple_form_for [@location, @booking] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.input :remark, as: :text %>
+
+  <%= f.button :submit %>
+<% end %>
