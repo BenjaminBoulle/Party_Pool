@@ -1,8 +1,8 @@
-<h1>My Locations</h1>
+<h1>Locations</h1>
 <% @locations.each do |location| %>
   <div>
     <%= link_to location.title, location_path(location) %>
-    <p> Owner :<%= location.user.email.split('@').first %> </p>
+    <p> Owner : <%= location.user.first_name %> <%=  location.user.last_name%> </p>
   </div>
 <% end %>
 

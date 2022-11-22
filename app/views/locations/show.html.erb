@@ -1,11 +1,16 @@
 <h1><%= @location.title %></h1>
-
-<h4><%= @owner %></h4>
+<h4><%= @location.user.first_name %> <%= @location.user.last_name%> </h4>
 <h3><%= @location.address %></h3>
 <% categories = @location.category.split(',') %>
 <% categories.each do |category| %>
   <%= category %>
 <% end %>
+
+<p>
+  <%= link_to new_location_booking_path(@location) do %>
+    <i class="fa-solid fa-receipt"></i>
+  <% end %>
+</p>
 
 <p>
   <%= link_to locations_path() do %>
