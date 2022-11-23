@@ -1,3 +1,8 @@
 #button{
-  color:whitesmoke;
+  color:white;
+  width: 50%;
+}
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
