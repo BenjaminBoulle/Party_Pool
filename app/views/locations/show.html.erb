@@ -1,0 +1,38 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <h1><%= @location.title %></h1>
+      <h4><%= @location.user.first_name %> <%= @location.user.last_name%> </h4>
+      <h3><%= @location.address %></h3>
+      <% categories = @location.category.split(',') %>
+      <% categories.each do |category| %>
+      <%= category %>
+      <% end %>
+
+      <p>
+        <%= link_to new_location_booking_path(@location) do %>
+          <i class="fa-solid fa-receipt"></i>
+        <% end %>
+      </p>
+
+<%= cl_image_tag @location.photo.key, height: 300, width: 400, crop: :fill %>
+
+
+
+      <p>
+        <%= link_to locations_path() do %>
+          <i class="fa-solid fa-map-location-dot"></i>
+        <% end %>
+      </p>
+  </div>
+
+        <div class="col-6">
+            <div style="width: 670px; height: 600px;"
+              data-controller="map"
+              data-map-markers-value="<%= @marker.to_json %>"
+              data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+            </div>
+    </div>
+  </div>
+  </div>
