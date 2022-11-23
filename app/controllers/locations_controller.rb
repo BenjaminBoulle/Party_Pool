@@ -1,16 +1,19 @@
 class LocationsController < ApplicationController
   def index
-    locations = Location.all
-    @locations = []
-    locations.each do |element|
-      unless element.user == current_user
-        @locations << element
-      end
+    @locations = Location.where.not(user: current_user)
+    @markers = @locations.geocoded.map do |location|
+      {
+        lat: location.latitude,
+        lng: location.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { location: location }),
+        image_url: helpers.asset_url("balloon.png")
+      }
     end
   end
 
   def show
     @location = Location.find(params[:id])
+    @marker = [{ lat: @location.latitude, lng: @location.longitude }]
   end
 
   def new
