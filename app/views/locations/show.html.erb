@@ -18,6 +18,8 @@
   <% end %>
 </p>
 
+<%= cl_image_tag @location.photo.key, height: 300, width: 400, crop: :fill %>
+
 <div style="width: 300px; height: 600px;"
   data-controller="map"
   data-map-markers-value="<%= @marker.to_json %>"

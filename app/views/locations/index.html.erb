@@ -3,7 +3,10 @@
   <% @locations.each do |location| %>
     <div class="location">
       <div class= "link_location">
-      <%= link_to location.title, location_path(location),class:"putaindelink" %>
+      <%= link_to location.title, location_path(location), class:"putaindelink" %>
+      </div>
+      <div>
+      <%= cl_image_tag location.photo.key, height: 240, width: 290, crop: :fill %>
       </div>
     </div>
   <% end %>
