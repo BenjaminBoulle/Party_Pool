@@ -12,15 +12,19 @@ class BookingsController < ApplicationController
     @location = Location.find(params[:location_id])
     @booking.location = @location
     if @booking.save
-      redirect_to location_path(@booking.location)
+      redirect_to location_bookings_path(@booking.location)
     else
       render 'new'
     end
   end
 
+  def index
+    @bookings = Booking.where(user: current_user)
+  end
+
   private
 
   def bookings_params
-    params.require(:booking).permit(:start_date, :end_date, :remark)
+    params.require(:booking).permit(:start_date, :end_date, :remark, :category)
   end
 end
