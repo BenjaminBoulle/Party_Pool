@@ -1,2 +1,10 @@
-#new review
+<h1>New review</h1>
+<%= simple_form_for [@location, @review] do |f| %>
+  <%= f.input :comment %>
+  <%= f.input :rating %>
+  <%= f.submit "Submit review", class: "btn btn-primary" %>
+<% end %>
 
+<br>
+
+<%= link_to "Back to location overview", locations_path, class: "btn btn-primary" %>
