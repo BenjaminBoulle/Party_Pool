@@ -1,2 +1,4 @@
-<h2><%= location.title %></h2>
-<p><%= location.address %></p>
+<%= link_to location_path(location)do %>
+  <h2><%= location.title %></h2>
+  <p><%= location.address %></p>
+<% end %>
