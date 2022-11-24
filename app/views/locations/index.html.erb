@@ -7,7 +7,7 @@
           <%= location.title %>
         </div>
         <div>
-          <%= cl_image_tag location.photos.first.key, height: 240, width: 290, crop: :fill %>
+          <%= cl_image_tag location.photos.first.key, height: 240, width: 290, crop: :fill, class:"image_location" %>
         </div>
       </div>
     <% end %>
@@ -20,7 +20,7 @@
            <%= location.title %>
           </div>
           <div>
-            <%= cl_image_tag location.photos.first.key, height: 240, width: 290, crop: :fill %>
+            <%= cl_image_tag location.photos.first.key, height: 240, width: 290, crop: :fill, class:"image_location" %>
           </div>
         </div>
       </div>
