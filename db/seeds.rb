@@ -45,27 +45,8 @@ location7 = Location.new(user_id: user1.id, title: 'The Palace', address: 'Avenu
 location8 = Location.new(user_id: user4.id, title: 'The Cave', address: 'Av. De Fré 206, 1180 Uccle', category: CATEGORY)
 location9 = Location.new(user_id: user4.id, title: 'The Stranger', address: 'Rue Dr Huet 79, 1070 Anderlecht', category: CATEGORY)
 
-file1 = URI.open("https://static.wixstatic.com/media/7680dd_61081cf4a35a45deaa47559601a03e6f~mv2.jpg/v1/fill/w_2500,h_1502,al_c/7680dd_61081cf4a35a45deaa47559601a03e6f~mv2.jpg")
-file2 = URI.open("https://miro.medium.com/max/1400/1*gx_0gcBtD_ogtyrph_kC1w.jpeg")
-file3 = URI.open("https://www.usinesportsclub.com/wp-content/uploads/2020/10/Usine-1A-scaled.jpg")
-file4 = URI.open("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/31/06/26/axe-in-target.jpg?w=1200&h=1200&s=1")
-file5 = URI.open("https://res.cloudinary.com/jerrick/image/upload/v1602228402/5f8010b2942bd5001cff8b6c.jpg")
-file6 = URI.open("https://www.condoblackbook.com/media/3873/the-ritz-carlton-residences-miami-beach.png?anchor=center&mode=crop&width=800&height=535&rnd=132652957070000000")
-file7 = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Buckingham_Palace_aerial_view_2016_%28cropped%29.jpg/1200px-Buckingham_Palace_aerial_view_2016_%28cropped%29.jpg")
-file8 = URI.open("https://i.natgeofe.com/n/22e86334-d123-4a21-8180-f694bf2632d7/3563728_16x9.jpg")
-file9 = URI.open("https://images.squarespace-cdn.com/content/v1/5876d81c5016e15c31366fcd/1593556305562-Y8D3K1QJLCMGQ9IVPU6O/MAH_2574-edit_REV.jpg?format=2500w")
 
 description1 = "Goupil le Fol is a true classic, a lush, dimly-lit boudoir close to the Grand'Place and yet miles away from present times. As soon as you pass the door you'll find yourself wrapped in a cocoon of French chanson and yesteryear spleen. Candle wax is dripping on the tables and comfortable armchairs in which one surrenders without regret will seduce you to try one of the alcohol free coctails or fruit wines."
-
-location1.photo.attach(io: file1, filename: "nes1.jpg", content_type: "image/jpg")
-location2.photo.attach(io: file2, filename: "nes2.jpg", content_type: "image/jpg")
-location3.photo.attach(io: file3, filename: "nes3.jpg", content_type: "image/jpg")
-location4.photo.attach(io: file4, filename: "nes4.jpg", content_type: "image/jpg")
-location5.photo.attach(io: file5, filename: "nes5.jpg", content_type: "image/jpg")
-location6.photo.attach(io: file6, filename: "nes6.jpg", content_type: "image/jpg")
-location7.photo.attach(io: file7, filename: "nes7.jpg", content_type: "image/jpg")
-location8.photo.attach(io: file8, filename: "nes8.jpg", content_type: "image/jpg")
-location9.photo.attach(io: file9, filename: "nes9.jpg", content_type: "image/jpg")
 
 location1.description = description1
 location2.description = description1
@@ -86,3 +67,75 @@ location6.save
 location7.save
 location8.save
 location9.save
+
+file1 = URI.open("https://static.wixstatic.com/media/7680dd_61081cf4a35a45deaa47559601a03e6f~mv2.jpg/v1/fill/w_2500,h_1502,al_c/7680dd_61081cf4a35a45deaa47559601a03e6f~mv2.jpg")
+file11 = URI.open("https://static.wixstatic.com/media/7680dd_61081cf4a35a45deaa47559601a03e6f~mv2.jpg/v1/fill/w_2500,h_1502,al_c/7680dd_61081cf4a35a45deaa47559601a03e6f~mv2.jpg")
+file111 = URI.open("https://static.wixstatic.com/media/7680dd_61081cf4a35a45deaa47559601a03e6f~mv2.jpg/v1/fill/w_2500,h_1502,al_c/7680dd_61081cf4a35a45deaa47559601a03e6f~mv2.jpg")
+
+file2 = URI.open("https://s.wsj.net/public/resources/images/B3-CU724_NYANDY_M_20190103170641.jpg")
+file22 = URI.open("https://s.wsj.net/public/resources/images/B3-CU724_NYANDY_M_20190103170641.jpg")
+file222 = URI.open("https://s.wsj.net/public/resources/images/B3-CU724_NYANDY_M_20190103170641.jpg")
+
+file3 = URI.open("https://www.usinesportsclub.com/wp-content/uploads/2020/10/Usine-1A-scaled.jpg")
+file33 = URI.open("https://www.usinesportsclub.com/wp-content/uploads/2020/10/Usine-1A-scaled.jpg")
+file333 = URI.open("https://www.usinesportsclub.com/wp-content/uploads/2020/10/Usine-1A-scaled.jpg")
+
+file4 = URI.open("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/31/06/26/axe-in-target.jpg?w=1200&h=1200&s=1")
+file44 = URI.open("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/31/06/26/axe-in-target.jpg?w=1200&h=1200&s=1")
+file444 = URI.open("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/31/06/26/axe-in-target.jpg?w=1200&h=1200&s=1")
+
+file5 = URI.open("https://res.cloudinary.com/jerrick/image/upload/v1602228402/5f8010b2942bd5001cff8b6c.jpg")
+file55 = URI.open("https://res.cloudinary.com/jerrick/image/upload/v1602228402/5f8010b2942bd5001cff8b6c.jpg")
+file555 = URI.open("https://res.cloudinary.com/jerrick/image/upload/v1602228402/5f8010b2942bd5001cff8b6c.jpg")
+
+file6 = URI.open("https://www.condoblackbook.com/media/3873/the-ritz-carlton-residences-miami-beach.png?anchor=center&mode=crop&width=800&height=535&rnd=132652957070000000")
+file66 = URI.open("https://www.condoblackbook.com/media/3873/the-ritz-carlton-residences-miami-beach.png?anchor=center&mode=crop&width=800&height=535&rnd=132652957070000000")
+file666 = URI.open("https://www.condoblackbook.com/media/3873/the-ritz-carlton-residences-miami-beach.png?anchor=center&mode=crop&width=800&height=535&rnd=132652957070000000")
+
+file7 = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Buckingham_Palace_aerial_view_2016_%28cropped%29.jpg/1200px-Buckingham_Palace_aerial_view_2016_%28cropped%29.jpg")
+file77 = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Buckingham_Palace_aerial_view_2016_%28cropped%29.jpg/1200px-Buckingham_Palace_aerial_view_2016_%28cropped%29.jpg")
+file777 = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Buckingham_Palace_aerial_view_2016_%28cropped%29.jpg/1200px-Buckingham_Palace_aerial_view_2016_%28cropped%29.jpg")
+
+file8 = URI.open("https://i.natgeofe.com/n/22e86334-d123-4a21-8180-f694bf2632d7/3563728_16x9.jpg")
+file88 = URI.open("https://i.natgeofe.com/n/22e86334-d123-4a21-8180-f694bf2632d7/3563728_16x9.jpg")
+file888 = URI.open("https://i.natgeofe.com/n/22e86334-d123-4a21-8180-f694bf2632d7/3563728_16x9.jpg")
+
+file9 = URI.open("https://images.squarespace-cdn.com/content/v1/5876d81c5016e15c31366fcd/1593556305562-Y8D3K1QJLCMGQ9IVPU6O/MAH_2574-edit_REV.jpg?format=2500w")
+file99 = URI.open("https://images.squarespace-cdn.com/content/v1/5876d81c5016e15c31366fcd/1593556305562-Y8D3K1QJLCMGQ9IVPU6O/MAH_2574-edit_REV.jpg?format=2500w")
+file999 = URI.open("https://images.squarespace-cdn.com/content/v1/5876d81c5016e15c31366fcd/1593556305562-Y8D3K1QJLCMGQ9IVPU6O/MAH_2574-edit_REV.jpg?format=2500w")
+
+location1.photos.attach(io: file1, filename: "Le Hangar.jpg", content_type: "image/jpeg")
+location1.photos.attach(io: file11, filename: "Le Hangar1.jpg", content_type: "image/jpeg")
+location1.photos.attach(io: file111, filename: "Le Hangars2.jpg", content_type: "image/jpeg")
+
+location2.photos.attach(io: file2, filename: "Factory.jpg", content_type: "image/jpeg")
+location2.photos.attach(io: file22, filename: "Factory1.jpg", content_type: "image/jpeg")
+location2.photos.attach(io: file222, filename: "Factory2.jpg", content_type: "image/jpeg")
+
+location3.photos.attach(io: file3, filename: "L'Usine.jpg", content_type: "image/jpeg")
+location3.photos.attach(io: file33, filename: "L'Usine1.jpg", content_type: "image/jpeg")
+location3.photos.attach(io: file333, filename: "L'Usine2.jpg", content_type: "image/jpeg")
+
+location4.photos.attach(io: file4, filename: "Wood Cutter.jpg", content_type: "image/jpeg")
+location4.photos.attach(io: file44, filename: "Wood Cutter1.jpg", content_type: "image/jpeg")
+location4.photos.attach(io: file444, filename: "Wood Cutter2.jpg", content_type: "image/jpeg")
+
+location5.photos.attach(io: file5, filename: "Beach.jpg", content_type: "image/jpeg")
+location5.photos.attach(io: file55, filename: "Beach1.jpg", content_type: "image/jpeg")
+location5.photos.attach(io: file555, filename: "Beach2.jpg", content_type: "image/jpeg")
+
+location6.photos.attach(io: file6, filename: "The Penthouse.jpg", content_type: "image/jpeg")
+location6.photos.attach(io: file66, filename: "The Penthouse1.jpg", content_type: "image/jpeg")
+location6.photos.attach(io: file666, filename: "The Penthouse2.jpg", content_type: "image/jpeg")
+
+location7.photos.attach(io: file7, filename: "The Palace.jpg", content_type: "image/jpeg")
+location7.photos.attach(io: file77, filename: "The Palace1.jpg", content_type: "image/jpeg")
+location7.photos.attach(io: file777, filename: "The Palace2.jpg", content_type: "image/jpeg")
+
+location8.photos.attach(io: file8, filename: "The Cave.jpg", content_type: "image/jpeg")
+location8.photos.attach(io: file88, filename: "The Cave1.jpg", content_type: "image/jpeg")
+location8.photos.attach(io: file888, filename: "The Cave2.jpg", content_type: "image/jpeg")
+
+location9.photos.attach(io: file9, filename: "The Stranger.jpg", content_type: "image/jpeg")
+location9.photos.attach(io: file99, filename: "The Stranger1.jpg", content_type: "image/jpeg")
+location9.photos.attach(io: file999, filename: "The Stranger2.jpg", content_type: "image/jpeg")
