@@ -23,7 +23,7 @@ class LocationsController < ApplicationController
   def create
     @location = Location.new(location_params)
     @location.user_id = current_user.id
-    @location.category = "'kids party', 'student party', 'wedding', 'bal', 'birthday'"
+    @location.category = "kids party, student party, wedding, bal, birthday"
     if @location.save
       redirect_to location_path(@location)
     else

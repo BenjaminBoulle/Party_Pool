@@ -16,9 +16,9 @@
         <% end %>
       </p>
 
-<%= cl_image_tag @location.photo.key, height: 300, width: 400, crop: :fill %>
+      <p><%= @location.description %></p>
 
-
+      <%= cl_image_tag @location.photo.key, height: 300, width: 400, crop: :fill %>
 
       <p>
         <%= link_to locations_path() do %>

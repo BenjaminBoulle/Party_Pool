@@ -55,6 +55,8 @@ file7 = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Buck
 file8 = URI.open("https://i.natgeofe.com/n/22e86334-d123-4a21-8180-f694bf2632d7/3563728_16x9.jpg")
 file9 = URI.open("https://images.squarespace-cdn.com/content/v1/5876d81c5016e15c31366fcd/1593556305562-Y8D3K1QJLCMGQ9IVPU6O/MAH_2574-edit_REV.jpg?format=2500w")
 
+description1 = "Goupil le Fol is a true classic, a lush, dimly-lit boudoir close to the Grand'Place and yet miles away from present times. As soon as you pass the door you'll find yourself wrapped in a cocoon of French chanson and yesteryear spleen. Candle wax is dripping on the tables and comfortable armchairs in which one surrenders without regret will seduce you to try one of the alcohol free coctails or fruit wines."
+
 location1.photo.attach(io: file1, filename: "nes1.jpg", content_type: "image/jpg")
 location2.photo.attach(io: file2, filename: "nes2.jpg", content_type: "image/jpg")
 location3.photo.attach(io: file3, filename: "nes3.jpg", content_type: "image/jpg")
@@ -64,6 +66,16 @@ location6.photo.attach(io: file6, filename: "nes6.jpg", content_type: "image/jpg
 location7.photo.attach(io: file7, filename: "nes7.jpg", content_type: "image/jpg")
 location8.photo.attach(io: file8, filename: "nes8.jpg", content_type: "image/jpg")
 location9.photo.attach(io: file9, filename: "nes9.jpg", content_type: "image/jpg")
+
+location1.description = description1
+location2.description = description1
+location3.description = description1
+location4.description = description1
+location5.description = description1
+location6.description = description1
+location7.description = description1
+location8.description = description1
+location9.description = description1
 
 location1.save
 location2.save
