@@ -1,5 +1,6 @@
 class LocationsController < ApplicationController
   def index
+    @locations_user = Location.where(user: current_user)
     @locations = Location.where.not(user: current_user)
     @markers = @locations.geocoded.map do |location|
       {
@@ -23,7 +24,7 @@ class LocationsController < ApplicationController
   def create
     @location = Location.new(location_params)
     @location.user_id = current_user.id
-    @location.category = "'kids party', 'student party', 'wedding', 'bal', 'birthday'"
+    @location.category = "kids party, student party, wedding, bal, birthday"
     if @location.save
       redirect_to location_path(@location)
     else
@@ -50,6 +51,6 @@ class LocationsController < ApplicationController
   private
 
   def location_params
-    params.require(:location).permit(:title, :address, :category, :photo)
+    params.require(:location).permit(:title, :address, :category, photos: [])
   end
 end

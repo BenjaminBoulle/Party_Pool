@@ -1,8 +1,10 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
+
       <img src="https://c8.alamy.com/comp/J1D0F8/party-time-round-grunge-black-stamp-J1D0F8.jpg" />
-</a>
+    </a>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -15,11 +17,17 @@
           <li class="nav-item">
             <%= link_to "Locations", locations_path%>
           </li>
-          <li class="nav-item">
             <% if user_signed_in? %>
-              <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete} %>
+              <li class="nav-item dropdown">
+              <%= image_tag "https://i.pinimg.com/originals/e8/3e/fc/e83efc660ae1fd1d420dacb58d00d953.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete} %>
+              </div>
+            </li>
             <% else %>
-              <%= link_to "Login", new_user_session_path %>
+              <li class="nav-item">
+                <%= link_to "Login", new_user_session_path %>
+              </li>
             <% end %>
           </li>
       </ul>

@@ -1,0 +1,56 @@
+.container2{
+  height:500px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  align-items: center;
+  background-size: 300% 300%;
+  background-image: linear-gradient(
+        -45deg,
+        rgba(59,173,227,1) 0%,
+        rgba(87,111,230,1) 25%,
+        rgba(152,68,183,1) 51%,
+        rgba(255,53,127,1) 100%
+  );
+  animation: AnimateBG 20s ease infinite;
+  flex-direction: column;
+
+}
+
+.reservations2{
+  display: flex;
+  justify-content: space-between;
+  background-color: blanchedalmond;
+  height: 100px;
+  width: 700px;
+  margin-top: 10px;
+  border-radius: 5px;
+  flex-direction: column;
+
+
+
+}
+
+.h1title{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-style: solid;
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
+
+.comebacklink{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: transparent;
+  margin-top: 10px;
+  border-style: solid;
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
