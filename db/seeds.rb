@@ -35,6 +35,13 @@ user4 = User.create(first_name: 'Arda',
                     address: 'Rue de mons, Mons',
                     password: 'azerty')
 
+User.create(first_name: 'Bob',
+            last_name: 'Boulle',
+            email: 'bob@gmail.com',
+            phone_number: '00 32 471 23 44 11',
+            address: 'Avenue du Monoplan 12, 1150 Woluwe-Saint-Pierre',
+            password: 'azerty')
+
 location1 = Location.new(user_id: user1.id, title: 'Le Hangar', address: 'Avenue Champel 28, Rhode-Saint-Genèse', category: CATEGORY)
 location2 = Location.new(user_id: user2.id, title: 'Factory', address: 'Cantersteen 12, 1000 Bruxelles', category: CATEGORY)
 location3 = Location.new(user_id: user2.id, title: "L'Usine", address: 'Pl. de la Vieille Halle aux Blés 28, 1000 Bruxelles', category: CATEGORY)
