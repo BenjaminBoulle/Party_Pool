@@ -17,7 +17,12 @@
       <div class="grayscale">
         <div class="location">
           <div class= "link_location">
-           <%= location.title %>
+           <span><%= location.title %></span>
+           <div class="location_link_delete">
+            <%= link_to  location_path(location), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+                <i class="fa-solid fa-trash-can"></i>
+            <% end %>
+            </div>
           </div>
           <div>
             <%= cl_image_tag location.photos.first.key, height: 240, width: 290, crop: :fill %>
