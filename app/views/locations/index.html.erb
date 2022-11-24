@@ -1,19 +1,41 @@
 <h1 class="h1">Locations</h1>
 <div class="all_locations">
   <% @locations.each do |location| %>
-    <div class="location">
-      <div class= "link_location">
-      <%= link_to location.title, location_path(location), class:"putaindelink" %>
+    <%= link_to location_path(location), class:"putaindelink" do %>
+      <div class="location">
+        <div class= "link_location">
+          <%= location.title %>
+        </div>
+        <div>
+          <%= cl_image_tag location.photos.first.key, height: 240, width: 290, crop: :fill, class:"image_location" %>
+        </div>
       </div>
-      <div>
-      <%= cl_image_tag location.photos.first.key, height: 240, width: 290, crop: :fill %>
-      </div>
-    </div>
+    <% end %>
   <% end %>
+
+    <% @locations_user.each do |location| %>
+      <div class="grayscale">
+        <div class="location">
+          <div class= "link_location">
+           <span><%= location.title %></span>
+           <div class="location_link_delete">
+            <%= link_to  location_path(location), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+                <i class="fa-solid fa-trash-can"></i>
+            <% end %>
+            </div>
+          </div>
+          <div>
+            <%= cl_image_tag location.photos.first.key, height: 240, width: 290, crop: :fill, class:"image_location" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
+
 <div class="add_location">
-<%= link_to new_location_path() do %>
-  Add Location
-  <i class="fa-solid fa-plus"></i>
+  <%= link_to new_location_path() do %>
+    Add Location
+    <i class="fa-solid fa-plus"></i>
 <% end %>
 
 </div>

@@ -28,6 +28,23 @@
         <% end %>
       </p>
 
+      <div class="reviewbox">
+        <p><strong>Reviews</strong></p>
+          <ul class="list-group">
+            <% @location.reviews.each do |review| %>
+
+              <li class="list-group-item"><%= review.comment %><% review.rating.to_i.times do %>
+                <i class="fa-solid fa-star"></i>
+              <% end %>
+              </li>
+                <%= link_to "Delete",
+                  review_path(review),
+                  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+                  %>
+              </li>
+            <% end %>
+          </ul>
+      </div>
 
       <p><strong>Reviews</strong></p>
       <ul class="list-group">
@@ -49,8 +66,7 @@
           <% @location.photos.each do |photo| %>
             <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill,class:"imagespadding" %>
           <% end %>
-          </div>
-
+        </div>
 
       <p><%= @location.description %></p>
 
