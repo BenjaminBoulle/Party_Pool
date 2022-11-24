@@ -3,7 +3,7 @@ class Location < ApplicationRecord
   geocoded_by :address
   has_many :reviews, dependent: :destroy
 
-  has_one_attached :photo
+  has_many_attached :photos
 
   validates :address, uniqueness: true
   validates :title, :address, :category, presence: true

@@ -44,14 +44,12 @@
           </li>
         <% end %>
       </ul>
-
-<%= cl_image_tag @location.photo.key, height: 300, width: 400, crop: :fill %>
-
-      <%= cl_image_tag @location.photo.key, height: 300, width: 400, crop: :fill %>
-
+      
+      <% @location.photos.each do |photo| %>
+        <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+      <% end %>
+      
       <p><%= @location.description %></p>
-
-
 
       <p>
         <%= link_to locations_path() do %>
