@@ -2,28 +2,25 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: row;
+  p {
+    margin-left: 200px;
+  }
   // grid-template-columns: 1fr 1fr 1fr;
   // grid-gap: 60px;
 }
 
-.card-category {
-  width: 450px;
-  height: 300px;
-  margin-top: 0px;
-  margin-bottom: 40px;
-  margin-right: 25px;
-  margin-left: 25px
+.cards-container {
+  padding:100px;
 }
 
 @media (min-width: 700px) {
   .cards {
-    height: 900px;
     padding:30px 10px;
     // grid-template-columns: 3fr 3fr 3fr;
   }
 }
 .card-category{
   text-align:center;
-  text-shadow: 5px;
 
 }
