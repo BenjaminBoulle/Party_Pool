@@ -7,6 +7,12 @@ Location.destroy_all
 User.destroy_all
 CATEGORY = "kids party, student party, wedding, ball, birthday"
 
+benjamin = URI.open("https://avatars.githubusercontent.com/u/115448260?v=4")
+arthur = URI.open("https://avatars.githubusercontent.com/u/115412551?v=4")
+gideon = URI.open("https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1665405360/o1pmr1f0uw7zalu3gb3h.jpg")
+arda = URI.open("https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1665238104/pf4ty3lwz2de1fs45ltw.jpg")
+bob = URI.open("https://i.pinimg.com/originals/e8/3e/fc/e83efc660ae1fd1d420dacb58d00d953.jpg")
+
 user1 = User.create(first_name: 'Benjamin',
                     last_name: 'Boulle',
                     email: 'benjaminboulle.sjb@gmail.com',
@@ -35,12 +41,19 @@ user4 = User.create(first_name: 'Arda',
                     address: 'Rue de mons, Mons',
                     password: 'azerty')
 
-User.create(first_name: 'Bob',
-            last_name: 'Boulle',
-            email: 'bob@gmail.com',
-            phone_number: '00 32 471 23 44 11',
-            address: 'Avenue du Monoplan 12, 1150 Woluwe-Saint-Pierre',
-            password: 'azerty')
+user1.photo.attach(io: benjamin, filename: "benjamin.jpg", content_type: "image/jpeg")
+user2.photo.attach(io: arthur, filename: "arthur.jpg", content_type: "image/jpeg")
+user3.photo.attach(io: gideon, filename: "gideon.jpg", content_type: "image/jpeg")
+user4.photo.attach(io: arda, filename: "arda.jpg", content_type: "image/jpeg")
+
+userbob = User.create(first_name: 'Bob',
+                      last_name: 'Boulle',
+                      email: 'bob@gmail.com',
+                      phone_number: '00 32 471 23 44 11',
+                      address: 'Avenue du Monoplan 12, 1150 Woluwe-Saint-Pierre',
+                      password: 'azerty')
+
+userbob.photo.attach(io: bob, filename: "bob.jpg", content_type: "image/jpeg")
 
 location1 = Location.new(user_id: user1.id, title: 'Le Hangar', address: 'Avenue Champel 28, Rhode-Saint-Genèse', category: CATEGORY)
 location2 = Location.new(user_id: user2.id, title: 'Factory', address: 'Cantersteen 12, 1000 Bruxelles', category: CATEGORY)
@@ -51,7 +64,6 @@ location6 = Location.new(user_id: user3.id, title: 'The Penthouse', address: 'Ri
 location7 = Location.new(user_id: user1.id, title: 'The Palace', address: 'Avenue du Monoplan 12, 1150 Bruxelles', category: CATEGORY)
 location8 = Location.new(user_id: user4.id, title: 'The Cave', address: 'Av. De Fré 206, 1180 Uccle', category: CATEGORY)
 location9 = Location.new(user_id: user4.id, title: 'The Stranger', address: 'Rue Dr Huet 79, 1070 Anderlecht', category: CATEGORY)
-
 
 description1 = "Goupil le Fol is a true classic, a lush, dimly-lit boudoir close to the Grand'Place and yet miles away from present times. As soon as you pass the door you'll find yourself wrapped in a cocoon of French chanson and yesteryear spleen. Candle wax is dripping on the tables and comfortable armchairs in which one surrenders without regret will seduce you to try one of the alcohol free coctails or fruit wines."
 
