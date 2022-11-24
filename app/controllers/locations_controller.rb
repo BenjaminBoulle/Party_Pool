@@ -1,5 +1,6 @@
 class LocationsController < ApplicationController
   def index
+    @locations_user = Location.where(user: current_user)
     @locations = Location.where.not(user: current_user)
     @markers = @locations.geocoded.map do |location|
       {
