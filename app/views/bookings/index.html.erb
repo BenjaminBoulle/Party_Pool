@@ -2,7 +2,6 @@
 
 <div class="container2">
 
-
         <div class= "h1title">
           <h1>Bookings</h1>
         </div>
@@ -15,14 +14,17 @@
               <p> Details : <%= booking.remark %> </p>
               <p> Location : <%= booking.location.address %> </p>
             </div>
+            <%= link_to "Delete",
+                 booking_path(booking),
+                 data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+                 %>
           <% end %>
-      
+
           <div class="comebacklink">
           <%= link_to locations_path() do %>
             Back to all locations
             <i class="fa-solid fa-rotate-left"></i>
           <% end %>
           </div>
-
 
 </div>
