@@ -1,8 +1,8 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-6">
-      <h1><%= @location.title %></h1>
+    <div class="col-8">
+      <h1 class="ltitle"><%= @location.title %></h1>
       <h4><%= @location.user.first_name %> <%= @location.user.last_name%> </h4>
       <h3><%= @location.address %></h3>
       <% categories = @location.category.split(',') %>
@@ -47,11 +47,11 @@
 
 <%= cl_image_tag @location.photo.key, height: 300, width: 400, crop: :fill %>
 
+      <%= cl_image_tag @location.photo.key, height: 300, width: 400, crop: :fill %>
 
       <p><%= @location.description %></p>
 
 
-      <%= cl_image_tag @location.photo.key, height: 300, width: 400, crop: :fill %>
 
       <p>
         <%= link_to locations_path() do %>
@@ -60,12 +60,12 @@
       </p>
   </div>
 
-        <div class="col-6">
-            <div style="width: 670px; height: 600px;"
+        <div class="col-4">
+            <div style="width: 110%; height: 100%;"
               data-controller="map"
               data-map-markers-value="<%= @marker.to_json %>"
               data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
             </div>
+        </div>
     </div>
-  </div>
   </div>
