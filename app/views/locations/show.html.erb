@@ -44,11 +44,14 @@
           </li>
         <% end %>
       </ul>
-      
-      <% @location.photos.each do |photo| %>
-        <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-      <% end %>
-      
+
+        <div class= images>
+          <% @location.photos.each do |photo| %>
+            <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill,class:"imagespadding" %>
+          <% end %>
+          </div>
+
+
       <p><%= @location.description %></p>
 
       <p>
