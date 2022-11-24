@@ -12,7 +12,13 @@
 
       <p>
         <%= link_to new_location_booking_path(@location) do %>
-          <i class="fa-solid fa-receipt"></i>
+          <i class="fa-solid fa-receipt"> - Book Location</i>
+        <% end %>
+      </p>
+
+      <p>
+        <%= link_to location_bookings_path(@location) do %>
+          <i class="fa-solid fa-border-all"> - My Bookings</i>
         <% end %>
       </p>
 
