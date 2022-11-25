@@ -13,4 +13,12 @@ class Location < ApplicationRecord
   def max_2_photos
     errors.add(:photos, "maximum 2 pictures allowed") if photos.count > 2
   end
+
+  include PgSearch::Model
+  pg_search_scope :search_by_title_address_category,
+    against: %i[ title address category],
+    using: {
+      tsearch: { prefix: true }
+    }
+
 end

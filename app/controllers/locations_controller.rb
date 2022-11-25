@@ -1,7 +1,13 @@
 class LocationsController < ApplicationController
   def index
     @locations_user = Location.where(user: current_user)
-    @locations = Location.where.not(user: current_user)
+    if params[:query].present?
+      sql_query = "title ILIKE :query OR address ILIKE :query OR category ILIKE :query"
+      @locations = Location.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @locations = Location.where.not(user: current_user)
+    end
+
     @markers = @locations.geocoded.map do |location|
       {
         lat: location.latitude,
@@ -47,6 +53,7 @@ class LocationsController < ApplicationController
     @location.destroy
     redirect_to locations_path, status: :see_other
   end
+
 
   private
 
