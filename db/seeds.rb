@@ -2,6 +2,7 @@
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 require "open-uri"
 
+Review.destroy_all
 Booking.destroy_all
 Location.destroy_all
 User.destroy_all
@@ -77,57 +78,48 @@ location7.description = description1
 location8.description = description1
 location9.description = description1
 
-location1.save
-location2.save
-location3.save
-location4.save
-location5.save
-location6.save
-location7.save
-location8.save
-location9.save
 
 file1 = URI.open("https://static.wixstatic.com/media/7680dd_61081cf4a35a45deaa47559601a03e6f~mv2.jpg/v1/fill/w_2500,h_1502,al_c/7680dd_61081cf4a35a45deaa47559601a03e6f~mv2.jpg")
-file11 = URI.open("https://static.wixstatic.com/media/7680dd_61081cf4a35a45deaa47559601a03e6f~mv2.jpg/v1/fill/w_2500,h_1502,al_c/7680dd_61081cf4a35a45deaa47559601a03e6f~mv2.jpg")
+file11 = URI.open("https://lehangar.be/wp-content/uploads/2021/02/11.jpg")
 # file111 = URI.open("https://static.wixstatic.com/media/7680dd_61081cf4a35a45deaa47559601a03e6f~mv2.jpg/v1/fill/w_2500,h_1502,al_c/7680dd_61081cf4a35a45deaa47559601a03e6f~mv2.jpg")
 # file1111 = URI.open("https://static.wixstatic.com/media/7680dd_61081cf4a35a45deaa47559601a03e6f~mv2.jpg/v1/fill/w_2500,h_1502,al_c/7680dd_61081cf4a35a45deaa47559601a03e6f~mv2.jpg")
 
 file2 = URI.open("https://s.wsj.net/public/resources/images/B3-CU724_NYANDY_M_20190103170641.jpg")
-file22 = URI.open("https://s.wsj.net/public/resources/images/B3-CU724_NYANDY_M_20190103170641.jpg")
+file22 = URI.open("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/d5/84/11/the-factory-bar.jpg?w=1200&h=-1&s=1")
 # file222 = URI.open("https://s.wsj.net/public/resources/images/B3-CU724_NYANDY_M_20190103170641.jpg")
 # file2222 = URI.open("https://s.wsj.net/public/resources/images/B3-CU724_NYANDY_M_20190103170641.jpg")
 
-file3 = URI.open("https://www.usinesportsclub.com/wp-content/uploads/2020/10/Usine-1A-scaled.jpg")
+file3 = URI.open("https://media-cdn.tripadvisor.com/media/photo-s/15/35/14/43/l-usine-le-thanh-ton.jpg")
 file33 = URI.open("https://www.usinesportsclub.com/wp-content/uploads/2020/10/Usine-1A-scaled.jpg")
 # file333 = URI.open("https://www.usinesportsclub.com/wp-content/uploads/2020/10/Usine-1A-scaled.jpg")
 # file3333 = URI.open("https://www.usinesportsclub.com/wp-content/uploads/2020/10/Usine-1A-scaled.jpg")
 
 file4 = URI.open("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/31/06/26/axe-in-target.jpg?w=1200&h=1200&s=1")
-file44 = URI.open("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/31/06/26/axe-in-target.jpg?w=1200&h=1200&s=1")
+file44 = URI.open("https://www.thebulletin.be/sites/default/files/woodcutter.jpg")
 # file444 = URI.open("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/31/06/26/axe-in-target.jpg?w=1200&h=1200&s=1")
 # file4444 = URI.open("https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/31/06/26/axe-in-target.jpg?w=1200&h=1200&s=1")
 
-file5 = URI.open("https://res.cloudinary.com/jerrick/image/upload/v1602228402/5f8010b2942bd5001cff8b6c.jpg")
+file5 = URI.open("https://media.cntraveler.com/photos/5e84a75e4ab09800086faefe/master/pass/KastaweyBeachBarCourtseyFSNevis.jpg")
 file55 = URI.open("https://res.cloudinary.com/jerrick/image/upload/v1602228402/5f8010b2942bd5001cff8b6c.jpg")
 # file555 = URI.open("https://res.cloudinary.com/jerrick/image/upload/v1602228402/5f8010b2942bd5001cff8b6c.jpg")
 # file5555 = URI.open("https://res.cloudinary.com/jerrick/image/upload/v1602228402/5f8010b2942bd5001cff8b6c.jpg")
 
 file6 = URI.open("https://www.condoblackbook.com/media/3873/the-ritz-carlton-residences-miami-beach.png?anchor=center&mode=crop&width=800&height=535&rnd=132652957070000000")
-file66 = URI.open("https://www.condoblackbook.com/media/3873/the-ritz-carlton-residences-miami-beach.png?anchor=center&mode=crop&width=800&height=535&rnd=132652957070000000")
+file66 = URI.open("https://paranych.blogs.redmantech.com/files/2020/07/benefits-penthouse-living-main-image.png")
 # file666 = URI.open("https://www.condoblackbook.com/media/3873/the-ritz-carlton-residences-miami-beach.png?anchor=center&mode=crop&width=800&height=535&rnd=132652957070000000")
 # file6666 = URI.open("https://www.condoblackbook.com/media/3873/the-ritz-carlton-residences-miami-beach.png?anchor=center&mode=crop&width=800&height=535&rnd=132652957070000000")
 
 file7 = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Buckingham_Palace_aerial_view_2016_%28cropped%29.jpg/1200px-Buckingham_Palace_aerial_view_2016_%28cropped%29.jpg")
-file77 = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Buckingham_Palace_aerial_view_2016_%28cropped%29.jpg/1200px-Buckingham_Palace_aerial_view_2016_%28cropped%29.jpg")
+file77 = URI.open("https://i.pinimg.com/originals/6e/36/5b/6e365b028e29073da13bc7f461791f78.jpg")
 # file777 = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Buckingham_Palace_aerial_view_2016_%28cropped%29.jpg/1200px-Buckingham_Palace_aerial_view_2016_%28cropped%29.jpg")
 # file7777 = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Buckingham_Palace_aerial_view_2016_%28cropped%29.jpg/1200px-Buckingham_Palace_aerial_view_2016_%28cropped%29.jpg")
 
 file8 = URI.open("https://i.natgeofe.com/n/22e86334-d123-4a21-8180-f694bf2632d7/3563728_16x9.jpg")
-file88 = URI.open("https://i.natgeofe.com/n/22e86334-d123-4a21-8180-f694bf2632d7/3563728_16x9.jpg")
+file88 = URI.open("https://media.margaretriver.com/wp-content/uploads/2021/11/Lake-Cave-4.2.16-Photo-Elements-Margaret-River0052screenres.jpg?tr=w-1500,h-1000")
 # file888 = URI.open("https://i.natgeofe.com/n/22e86334-d123-4a21-8180-f694bf2632d7/3563728_16x9.jpg")
 # file8888 = URI.open("https://i.natgeofe.com/n/22e86334-d123-4a21-8180-f694bf2632d7/3563728_16x9.jpg")
 
-file9 = URI.open("https://images.squarespace-cdn.com/content/v1/5876d81c5016e15c31366fcd/1593556305562-Y8D3K1QJLCMGQ9IVPU6O/MAH_2574-edit_REV.jpg?format=2500w")
+file9 = URI.open("https://lh5.googleusercontent.com/p/AF1QipMN_OzmwcxKWFTYK6xpDfi8-QHWg2H9UeIEzbl1=w500-h500-k-no")
 file99 = URI.open("https://images.squarespace-cdn.com/content/v1/5876d81c5016e15c31366fcd/1593556305562-Y8D3K1QJLCMGQ9IVPU6O/MAH_2574-edit_REV.jpg?format=2500w")
 # file999 = URI.open("https://images.squarespace-cdn.com/content/v1/5876d81c5016e15c31366fcd/1593556305562-Y8D3K1QJLCMGQ9IVPU6O/MAH_2574-edit_REV.jpg?format=2500w")
 # file9999 = URI.open("https://images.squarespace-cdn.com/content/v1/5876d81c5016e15c31366fcd/1593556305562-Y8D3K1QJLCMGQ9IVPU6O/MAH_2574-edit_REV.jpg?format=2500w")
@@ -158,7 +150,7 @@ location5.photos.attach(io: file55, filename: "Beach1.jpg", content_type: "image
 # location5.photos.attach(io: file5555, filename: "Beach3.jpg", content_type: "image/jpeg")
 
 location6.photos.attach(io: file6, filename: "The Penthouse.jpg", content_type: "image/jpeg")
-location6.photos.attach(io: file66, filename: "The Penthouse1.jpg", content_type: "image/jpeg")
+location6.photos.attach(io: file66, filename: "The Penthouse1.png", content_type: "image/png")
 # location6.photos.attach(io: file666, filename: "The Penthouse2.jpg", content_type: "image/jpeg")
 # location6.photos.attach(io: file6666, filename: "The Penthouse3.jpg", content_type: "image/jpeg")
 
@@ -176,3 +168,13 @@ location9.photos.attach(io: file9, filename: "The Stranger.jpg", content_type: "
 location9.photos.attach(io: file99, filename: "The Stranger1.jpg", content_type: "image/jpeg")
 # location9.photos.attach(io: file999, filename: "The Stranger2.jpg", content_type: "image/jpeg")
 # location9.photos.attach(io: file9999, filename: "The Stranger3.jpg", content_type: "image/jpeg")
+
+location1.save
+location2.save
+location3.save
+location4.save
+location5.save
+location6.save
+location7.save
+location8.save
+location9.save

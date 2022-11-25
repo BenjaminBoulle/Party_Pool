@@ -1,8 +1,15 @@
 <%= simple_form_for @location do |f| %>
   <%= f.input :title %>
-  <%= f.input :address %>
+  <%= f.input :address, input_html: {data: {address_autocomplete_target: "address"}, class:"d-none"}, wrapper_html: {data: {controller: "address-autocomplete", address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}%>
   <%= f.input :description %>
   <%= f.input :photos, as: :file, input_html: { multiple: true } %>
 
   <%= f.button :submit %>
 <% end %>
+
+
+
+<div style="width: 100%; height: 600px;"
+  data-controller="map"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
