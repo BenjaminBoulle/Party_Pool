@@ -28,7 +28,7 @@ class LocationsController < ApplicationController
     if @location.save
       redirect_to location_path(@location)
     else
-      render 'new'
+      render 'new', status: :unprocessable_entity
     end
   end
 
@@ -51,6 +51,6 @@ class LocationsController < ApplicationController
   private
 
   def location_params
-    params.require(:location).permit(:title, :address, :category, photos: [])
+    params.require(:location).permit(:title,:description, :address, :category, photos: [])
   end
 end
