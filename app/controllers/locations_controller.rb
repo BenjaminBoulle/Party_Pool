@@ -20,7 +20,8 @@ class LocationsController < ApplicationController
 
   def show
     @location = Location.find(params[:id])
-    @marker = [{ lat: @location.latitude, lng: @location.longitude }]
+
+    @markers = [{ lat: @location.latitude, lng: @location.longitude, image_url: helpers.asset_url("balloon.png") }]
   end
 
   def new
@@ -29,10 +30,10 @@ class LocationsController < ApplicationController
 
   def create
     @location = Location.new(location_params)
-    @location.user_id = current_user.id
+    @location.user = current_user
     @location.category = "kids party, student party, wedding, bal, birthday"
     if @location.save
-      redirect_to location_path(@location)
+      redirect_to locations_path
     else
       render 'new', status: :unprocessable_entity
     end
@@ -45,7 +46,7 @@ class LocationsController < ApplicationController
   def update
     @location = Location.find(params[:id])
     @location.update(location_params)
-    redirect_to locartions_path()
+    redirect_to locartions_path
   end
 
   def destroy
@@ -57,6 +58,6 @@ class LocationsController < ApplicationController
   private
 
   def location_params
-    params.require(:location).permit(:title,:description, :address, :category, photos: [])
+    params.require(:location).permit(:title, :description, :address, :category, photos: [])
   end
 end

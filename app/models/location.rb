@@ -8,6 +8,7 @@ class Location < ApplicationRecord
   validates :address, uniqueness: true
   validates :title, :address, :category, presence: true
   validate :max_2_photos, :min_1_photo
+  validates :description, presence: true, length: { minimum: 200 }
   after_validation :geocode, if: :will_save_change_to_address?
 
   def max_2_photos
