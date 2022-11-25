@@ -32,15 +32,16 @@
         <p><strong>Reviews</strong></p>
           <ul class="list-group">
             <% @location.reviews.each do |review| %>
-
               <li class="list-group-item"><%= review.comment %><% review.rating.to_i.times do %>
                 <i class="fa-solid fa-star"></i>
               <% end %>
               </li>
-                <%= link_to "Delete",
+                <% if current_user == review.user %>
+                  <%= link_to "Delete",
                   review_path(review),
                   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-                  %>
+                 %>
+                <% end %>
               </li>
             <% end %>
           </ul>
@@ -56,7 +57,7 @@
 
       <p>
         <%= link_to locations_path() do %>
-          <i class="fa-solid fa-map-location-dot"></i>
+          <i class="fa-solid fa-map-location-dot"> - Back to locations</i>
         <% end %>
       </p>
   </div>
