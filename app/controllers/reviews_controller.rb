@@ -8,7 +8,8 @@ class ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    @review.location = @location
+    @review.user = current_user
+    @review.location = Location.find(params[:location_id])
     if @review.save
       redirect_to location_path(@location)
     else

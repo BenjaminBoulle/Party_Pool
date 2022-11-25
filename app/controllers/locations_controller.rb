@@ -54,7 +54,6 @@ class LocationsController < ApplicationController
     redirect_to locations_path, status: :see_other
   end
 
-
   private
 
   def location_params
