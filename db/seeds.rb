@@ -77,15 +77,6 @@ location7.description = description1
 location8.description = description1
 location9.description = description1
 
-location1.save
-location2.save
-location3.save
-location4.save
-location5.save
-location6.save
-location7.save
-location8.save
-location9.save
 
 file1 = URI.open("https://static.wixstatic.com/media/7680dd_61081cf4a35a45deaa47559601a03e6f~mv2.jpg/v1/fill/w_2500,h_1502,al_c/7680dd_61081cf4a35a45deaa47559601a03e6f~mv2.jpg")
 file11 = URI.open("https://lehangar.be/wp-content/uploads/2021/02/11.jpg")
@@ -176,3 +167,13 @@ location9.photos.attach(io: file9, filename: "The Stranger.jpg", content_type: "
 location9.photos.attach(io: file99, filename: "The Stranger1.jpg", content_type: "image/jpeg")
 # location9.photos.attach(io: file999, filename: "The Stranger2.jpg", content_type: "image/jpeg")
 # location9.photos.attach(io: file9999, filename: "The Stranger3.jpg", content_type: "image/jpeg")
+
+location1.save
+location2.save
+location3.save
+location4.save
+location5.save
+location6.save
+location7.save
+location8.save
+location9.save
