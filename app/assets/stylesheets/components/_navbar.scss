@@ -13,5 +13,31 @@
 
 .nav-item {
   justify-content: space-between;
-  margin: 20px;
+  margin: 15px;
+}
+
+.form-text {
+  width: 100%;
+  align-items: center;
+}
+
+form {
+  display: flex;
+}
+
+.form-control reduction form-text{
+  box-shadow: 0 2px 6px black;
+  border-radius: 0em;
+  border-radius: 4px;
+  font-weight: bold;
+  padding: 8px 24px;
+
+}
+.nav-btn{
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(#167FFB, #0F60C4);
+  border: 1px solid #0F60C4;
 }
