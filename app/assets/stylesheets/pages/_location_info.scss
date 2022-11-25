@@ -10,10 +10,10 @@
   background-size: 300% 300%;
   background-image: linear-gradient(
         -45deg,
-        rgba(59,173,227,1) 0%,
-        rgba(87,111,230,1) 25%,
-        rgba(152,68,183,1) 51%,
-        rgba(255,53,127,1) 100%
+        rgb(210, 227, 59) 0%,
+        rgb(87, 230, 118) 25%,
+        rgb(183, 68, 68) 51%,
+        rgb(73, 53, 255) 100%
   );
   animation: AnimateBG 20s ease infinite;
 }
@@ -34,7 +34,9 @@
   padding-left: 10px;
   padding-top: 10px;
   padding-right: 10px;
+  padding-bottom: 10px;
   border-style: dashed;
+  margin-bottom: 10px;
 }
 
 .imagespadding{
@@ -53,4 +55,7 @@
   margin-bottom: 10px;
   padding-left: 5px;
  }
- 
+
+ .spacecategory{
+  margin-bottom: 10px;
+ }

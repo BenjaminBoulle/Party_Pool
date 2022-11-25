@@ -5,10 +5,12 @@
       <h1 class="ltitle"><%= @location.title %></h1>
       <h4><%= @location.user.first_name %> <%= @location.user.last_name%> </h4>
       <h3><%= @location.address %></h3>
+      <div class="spacecategory">
       <% categories = @location.category.split(',') %>
-      <% categories.each do |category| %>
+      <% categories.each do |category|%>
       <%= category %>
       <% end %>
+      </div>
 
       <p>
         <%= link_to new_location_booking_path(@location) do %>
