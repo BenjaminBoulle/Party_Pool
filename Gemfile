@@ -8,6 +8,8 @@ gem "rails", "~> 7.0.4"
 
 gem "devise"
 
+gem "pg_search"
+
 gem "geocoder"
 
 gem "dotenv-rails", groups: [:development, :test]
